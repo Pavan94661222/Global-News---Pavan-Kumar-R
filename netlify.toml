@@ -1,0 +1,24 @@
+[build]
+  command = "node build.js"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Keep the /api/* paths the front-end already calls, but answer them from
+# functions instead of a long-running Node server.
+[[redirects]]
+  from = "/api/ai"
+  to = "/.netlify/functions/ai"
+  status = 200
+
+[[redirects]]
+  from = "/api/news"
+  to = "/.netlify/functions/news"
+  status = 200
+
+[[redirects]]
+  from = "/api/article"
+  to = "/.netlify/functions/article"
+  status = 200

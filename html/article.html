@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GLOBALNEWS - Read the full story from trusted international newsrooms." />
+    <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png" />
+    <link rel="manifest" href="../favicon/manifest.json" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>GLOBALNEWS | Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://kit.fontawesome.com/eaa4609b2f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader-globe"><i class="fas fa-globe"></i></div>
+        <p>Loading the story…</p>
+    </div>
+
+    <header class="site-header">
+        <div class="topbar">
+            <div class="container">
+                <span class="topbar-date" id="topbar-date"></span>
+                <div class="topbar-social">
+                    <a href="https://web.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar">
+            <div class="container">
+                <a class="brand" href="../index.html">
+                    <span class="brand-mark"><i class="fas fa-globe"></i></span>
+                    <span class="brand-text">GLOBAL<b>NEWS</b></span>
+                </a>
+
+                <form class="search" onsubmit="event.preventDefault(); window.location.href='../index.html?q=' + encodeURIComponent(this.q.value);" role="search">
+                    <i class="fas fa-search"></i>
+                    <input type="search" name="q" placeholder="Search news, topics, sources…" aria-label="Search news" />
+                    <button type="submit">Search</button>
+                </form>
+
+                <a class="btn-outline" href="../index.html"><i class="fas fa-arrow-left"></i> Back to feed</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container layout">
+            <div class="story-col" id="story-root">
+                <nav class="breadcrumb"><a href="../index.html">Home</a><i class="fas fa-chevron-right"></i><span>Story</span></nav>
+                <article class="story">
+                    <div class="story-body">
+                        <h1>Loading story…</h1>
+                        <p class="widget-empty">Fetching the article from the live feed.</p>
+                    </div>
+                </article>
+            </div>
+
+            <aside class="sidebar">
+                <section class="widget" style="--i: 0">
+                    <h3 class="widget-title"><i class="fas fa-compass"></i> Explore</h3>
+                    <div class="topic-chips" data-explore></div>
+                </section>
+
+                <section class="widget" style="--i: 1">
+                    <h3 class="widget-title"><i class="fas fa-newspaper"></i> Back to the feed</h3>
+                    <p class="widget-empty">Browse every section and search thousands of live headlines.</p>
+                    <a class="btn-primary btn-block" href="../index.html">All Headlines <i class="fas fa-arrow-right"></i></a>
+                </section>
+
+                <section class="widget widget-cta" style="--i: 2">
+                    <h3>Stay Informed</h3>
+                    <p>The day's most important stories, delivered to your inbox.</p>
+                    <input type="email" placeholder="Enter your email" aria-label="Email address" />
+                    <button type="button">Subscribe</button>
+                </section>
+            </aside>
+        </div>
+        <p class="feed-status" id="feed-status" hidden></p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2026 GLOBALNEWS. All Rights Reserved.</p>
+                <p class="footer-note">2026 reserved &middot; owned by Pavan Kumar R</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/news.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
